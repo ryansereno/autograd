@@ -12,15 +12,23 @@ class Neuron:
     out = activation.tanh()
     #return a single output scalar
     return out
+  
+  def parameters(self):
+    #merge the weights list with the bias (convert bias to list for concat.)
+    return self.w + [self.b]
 
 class Layer:
   def __init__(self, nin, nout):
     #initialize with number of inputs (for ever neuraon) and number of outputs (also the number of neurons)
     self.neurons = [Neuron(nin) for _ in range(nout)]
-
+  
   def __call__(self,x):
     outs = [n(x) for n in self.neurons]
     return outs[0] if len(outs) == 1 else outs
+
+  def parameters(self):
+    #return all of the parameters of the neurons in the layer
+    return [p for neuron in self.neurons for p in neuron.parameters()]
 
 class MLP:
   def __init__(self, nin, nouts):
@@ -34,3 +42,7 @@ class MLP:
     for layer in self.layers:
       x = layer(x)
     return x
+
+  def parameters(self):
+    #return all parameters for every layer in network
+    return [p for layer in self.layers for p in layer.parameters()]
