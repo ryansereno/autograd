@@ -24,6 +24,18 @@
 
 Library for auto generating derivatives on-the-fly
 <br/>
+Neural network 'learning' involves incrementally adjusting the model's parameters, based on the gradient of the loss function.
+<br/>
+<br/>
+
+These adjustments are made in the direction that _minimizes_ the loss function, a process called gradient descent.
+<br/>
+<br/>
+
+To derive these gradients, all operations and their inputs during the forward pass must be tracked so that their derivatives can be calculated during the backward pass. This process, known as backpropagation, uses the chain rule to efficiently compute these gradients.
+<br/>
+<br/>
+
 All basic math operators are supported (add, mult, exponentiate, etc.)
 <br/>
 value.backward() will calculate the gradients and save to each value in the lineage
