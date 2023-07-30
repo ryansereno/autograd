@@ -67,7 +67,7 @@ print(f'{b.grad:.4f}') # prints 645.5773, i.e. the numerical value of dg/db
 
 Clone the repo
    ```sh
-   git clone https://github.com/ryansereno/micrograd
+   git clone https://github.com/ryansereno/autograd
    ```
 Import
    ```python
