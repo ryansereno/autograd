@@ -38,7 +38,7 @@ To derive these gradients, all operations and their inputs during the forward pa
 
 All basic math operators are supported (add, mult, exponentiate, etc.)
 <br/>
-value.backward() will calculate the gradients and save to each value in the lineage
+value.backward() will calculate the gradients and save to each value object in the lineage
 <br/>
 
 ```python
