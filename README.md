@@ -24,6 +24,9 @@
 
 Library for auto generating derivatives on-the-fly
 <br/>
+Based on Andrej Karpathy's [micrograd](https://github.com/karpathy/micrograd)
+<br/>
+<br/>
 Neural network 'learning' involves incrementally adjusting the model's parameters, based on the gradient of the loss function.
 <br/>
 <br/>
