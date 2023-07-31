@@ -46,6 +46,7 @@ value.backward() will calculate the gradients and save to each value object in t
 
 ```python
 from autograd import Value
+from nn import MLP
 
 a = Value(-4.0)
 b = Value(2.0)
