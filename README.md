@@ -60,11 +60,8 @@ e = c - d
 f = e**2
 g = f / 2.0
 g += 10.0 / f
-
 print(f'{g.data:.4f}') # prints 24.7041, the outcome of this forward pass
-
 g.backward() # calculate the gradient of g with respect to each parameter in the network
-
 print(f'{a.grad:.4f}') # prints 138.8338, the numerical value of dg/da
 print(f'{b.grad:.4f}') # prints 645.5773, the numerical value of dg/db
 
@@ -72,11 +69,8 @@ print(f'{b.grad:.4f}') # prints 645.5773, the numerical value of dg/db
 from nn import MLP
 
 network = MLP(3, [4,4,1]) # initialize a multilayer perceptron
-
 x = [2.0, 3.0, -1.0] # create some input data
-
 y = network(x) # run a forward pass
-
 y.backward() # calculate the gradients
 ```
 <!-- GETTING STARTED -->
