@@ -46,8 +46,8 @@ value.backward() will calculate the gradients and save to each value object in t
 
 ```python
 from autograd import Value
-from nn import MLP
 
+#using basic math operators:
 a = Value(-4.0)
 b = Value(2.0)
 c = a + b
@@ -67,6 +67,9 @@ g.backward() # calculate the gradient of g with respect to each parameter in the
 
 print(f'{a.grad:.4f}') # prints 138.8338, the numerical value of dg/da
 print(f'{b.grad:.4f}') # prints 645.5773, the numerical value of dg/db
+
+#using in a neural net:
+from nn import MLP
 ```
 <!-- GETTING STARTED -->
 
