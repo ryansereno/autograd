@@ -70,6 +70,14 @@ print(f'{b.grad:.4f}') # prints 645.5773, the numerical value of dg/db
 
 #using in a neural net:
 from nn import MLP
+
+network = MLP(3, [4,4,1]) # initialize a multilayer perceptron
+
+x = [2.0, 3.0, -1.0] # create some input data
+
+y = network(x) # run a forward pass
+
+y.backward() # calculate the gradients
 ```
 <!-- GETTING STARTED -->
 
