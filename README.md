@@ -22,7 +22,7 @@
 <br/>
 <br/>
 
-Library for storing derivatives and calculating loss gradients.
+Library for storing partial derivatives and calculating loss gradients.
 <br/>
 Based on Andrej Karpathy's [micrograd](https://github.com/karpathy/micrograd)
 <br/>
