@@ -22,7 +22,7 @@
 <br/>
 <br/>
 
-Library for auto generating derivatives on-the-fly
+Library for generating derivatives and calculating loss gradients.
 <br/>
 Based on Andrej Karpathy's [micrograd](https://github.com/karpathy/micrograd)
 <br/>
